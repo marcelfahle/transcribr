@@ -1,0 +1,19 @@
+
+- App is a widget (iFrame?) that can be placed anywhere.
+- setup a static text page that looks like a blog
+- place the component underneath each post. 
+- each post has an ID
+- ID gets fed to widget (or better the path to the post because it's more unique)
+- it shows transcriptions of there are any
+- it shows a record button, where the reader can record a reading of the post
+- each transcriptopns can be rated/liked. sort by highest rated
+- make the posts dynamic
+- add meteor accounts
+- user needs to be logged in to transcribe
+
+
+TECH: 
+- react
+- react router
+- redux
+- meteor
