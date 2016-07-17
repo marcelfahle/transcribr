@@ -21,3 +21,13 @@ autopublish             # Publish all data to the clients (for prototyping)
 insecure                # Allow all DB writes from clients (for prototyping)
 mquandalle:stylus
 zurb:foundation-sites
+maibaum:foundation-icons
+react-meteor-data
+accounts-ui
+accounts-twitter
+accounts-facebook
+accounts-github
+accounts-password
+ultimatejs:tracker-react
+cosmos:browserify
+edgee:slingshot

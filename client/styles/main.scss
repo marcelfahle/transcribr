@@ -1,2 +1,6 @@
 @import '{zurb:foundation-sites}/scss/foundation';
 @include foundation-everything;
+
+.recorderInterface {
+  height: 400px;
+}
