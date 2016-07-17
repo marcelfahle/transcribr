@@ -1,4 +1,4 @@
-
+## THE APP:
 - App is a widget (iFrame?) that can be placed anywhere.
 - setup a static text page that looks like a blog
 - place the component underneath each post. 
@@ -12,8 +12,16 @@
 - user needs to be logged in to transcribe
 
 
-TECH: 
+
+
+## TECH: 
 - react
 - react router
 - redux
 - meteor
+
+## MODELS:
+- users (Meteor accounts)
+- blogposts
+- transcriptions (belongs to user, unique per user per path -- 
+if the user sees his own post where shere transcribed already, the posts gets shown with update options )
