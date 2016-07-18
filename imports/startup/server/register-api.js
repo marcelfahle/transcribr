@@ -1,2 +1,2 @@
-import './../../api/recordings/recordings.js';
-import './../../api/recordings/publications.js';
+import './../../api/recordings/methods.js';
+import './../../api/recordings/server/publications.js';

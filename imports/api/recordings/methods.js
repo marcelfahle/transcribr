@@ -16,8 +16,21 @@ export const insert = new ValidatedMethod({
     //    'Cannot add todos to a private list that is not yours');
     //}
 
-    const recordings = args;
+    const recording = args;
 
     Recordings.insert( recording );
   },
 });
+
+export const remove = new ValidatedMethod({
+  name: 'galleries.remove',
+  validate: new SimpleSchema({
+    recordingId: { type: String },
+  }).validator(),
+  run({ recordingId }) {
+    const recording = Recordings.findOne(recordingId);
+
+    Recordings.remove(recordingId);
+  },
+});
+

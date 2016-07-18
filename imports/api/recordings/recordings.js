@@ -12,6 +12,9 @@ RecordingSchema = new SimpleSchema({
   userId: {
     type: String
   },
+  refId: {
+    type: String
+  },
   file: {
     type: String
   },
