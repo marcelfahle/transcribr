@@ -6,6 +6,8 @@ import RecordRTC from 'recordrtc';
 
 import AccountsUIWrapper from './../AccountsUIWrapper';
 
+import { uploadToS3 } from './../../modules/upload.js';
+
 var recordRTC; 
 var audio;
 
@@ -52,8 +54,12 @@ class TranscribrRecorder extends TrackerReact( React.Component ) {
       audio.src = audioURL;
 
       var recordedBlob = recordRTC.getBlob();
-      recordRTC.save('file-name.WAV');
-      recordRTC.getDataURL( (dataURL) => { });
+      uploadToS3({
+        component: this,
+        blob: recordedBlob
+      });
+      //recordRTC.save('file-name.WAV');
+      //recordRTC.getDataURL( (dataURL) => { });
     });
   }
 
