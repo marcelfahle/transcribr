@@ -69,6 +69,10 @@ class TranscribrRecorder extends TrackerReact( React.Component ) {
   }
 
   startRecording() {
+		navigator.getUserMedia = ( navigator.getUserMedia ||
+                       navigator.webkitGetUserMedia ||
+                       navigator.mozGetUserMedia ||
+                       navigator.msGetUserMedia);
    	if (navigator.getUserMedia) {
       //navigator.getUserMedia({audio: true}, this.onSuccess, this.onFail);
       navigator.mediaDevices.getUserMedia({video: false,audio: true}).then(this.onSuccess).catch(this.onFail);
