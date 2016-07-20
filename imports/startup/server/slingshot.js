@@ -22,6 +22,7 @@ Slingshot.createDirective( "uploadToS3", Slingshot.S3Storage, {
     // TODO: add user info to filename
     const url = new URL(Meteor.absoluteUrl());
     const key = "transcribr/" + url.host + "/" + _.slugify(new Date().toString()) + ".wav";
-    return key;
+		const encKey = key.replace(/[^a-z0-9]/gi, '_').toLowerCase();
+    return encKey;
   }
 });
